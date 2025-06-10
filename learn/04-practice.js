@@ -1,11 +1,10 @@
 // # 실습
-
 // 콘솔 패널에서 숫자, 문자열, 불리언 값을 만들어 다음을 연습합니다.
 
 // 1. 문자열(String) 만들고 출력하기
 console.log('statement')
 // 2. 문자열 두 개 합치기
-console.log('x' + 'y')
+console.log('x' + ' + y')
 // 3. 숫자(Number) 만들고 출력하기
 console.log(9200)
 // 4. `31`과 `81` 더하기
