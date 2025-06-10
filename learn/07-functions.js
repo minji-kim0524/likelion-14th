@@ -3,7 +3,7 @@ console.log('함수(Function)')
 // 함수란?
 // 특정 순서에 따라 작업이 실행되는 코드 묶음(블록)
 
-// 함수 이름 [
+// 함수 이름 drawWater [
 //  1. 빈 양동이 가져오기
 //  2. 양동이 들고 우물로 이동하기
 //  3. 우물에서 물 길어오기
@@ -11,6 +11,7 @@ console.log('함수(Function)')
 // ]
 
 // 함수 부르기(call)
+// drawWater 함수 부르기(call)
 
 // 1. 냄비를 꺼낸다.
 // 2. 냄비에 물을 받는다.
@@ -60,14 +61,18 @@ function 물길러가기() {
 
 // 함수 배개변수 (Function Parameters)
 
-// 함수 밖에 있는 변수 [전역] 변수
-// 코드실행 범위 어디서나 접근가능 (global scope variables)
-let year = 4027
+// 함수 밖에 있는 변수 [전역] 변수 (global scope variables)
+// 코드실행 범위 어디서나 접근가능
+// let year = 4027
 
 // 함수 선언
-function writeDiary() {
+function writeDiary(연도, 월, 일, 장소) {
+  // 함수이름 옆 () 안에 선언된 변수를 특별히 매개변수라 부른다.
+  console.log(연도, 월, 일)
+
   // 함수 내부에 선언된 변수 [지역] 변수 (local scope variables)
   // 함수 안에서 사용
+
   // 연도(year)
   let year = 2025
   // 월(month)
@@ -75,13 +80,18 @@ function writeDiary() {
   // 일(day)
   let day = 10
 
+  // let location = '롯데 타워'
   // year = 2026
 
   // 변수 + 문자 = 문장
   // 변수('문자') + 변수('문자') = 문자 연결
   console.log('몇' + '년' + '몇' + '월' + '몇' + '일에 일기를 쓴다')
-  console.log(year + '년' + month + '월' + day + '일에 일기를 쓴다')
+  console.log(연도 + '년' +  월 + '월' + 일 + '일에 일기를 쓴다')
+  console.log(연도 + '년' +  월 + '월' + 일 + '일에' + 장소 + '에 다녀온 일기를 쓴다')
 }
 
 // 함수 호출(실행)
 writeDiary()
+writeDiary(2025, 6, 10, 'N타워') // 인수(arguments)
+writeDiary(2025, 7, 1, '광안리 해수욕장')
+writeDiary(2025, 10, 30, '원주 디자인 뮤지엄')
