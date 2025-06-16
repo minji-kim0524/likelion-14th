@@ -26,6 +26,16 @@ function getMoney(price /*필수값*/, unit /*옵션값*/) {
   }
 }
 
+// 개발자가 명시적으로 반환값 설정
+function getMoney(price, unit) {
+  if (!unit) unit = '원'
+  if (unit === '달러') return '$' + price
+  return price + unit
+
+  // 함수는 암묵적으로 undefined 반환
+  // return undefined
+}
+
 
 
 // 선생님 문제풀이
